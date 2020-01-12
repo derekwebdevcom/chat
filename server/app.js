@@ -1,6 +1,19 @@
+'use strict';
+
+const express = require('express');
+
+const path = require('path');
+
+const PORT = process.env.PORT || 3001;
+const INDEX = path.join(__dirname, 'public/index.html');
+
+const server = express()
+  .use((req, res) => res.sendFile(INDEX) )
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 8989 })
+const wss = new WebSocket.Server({ server })
 
 const users = []
 

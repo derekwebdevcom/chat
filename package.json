@@ -1,8 +1,12 @@
 {
   "name": "chat",
   "version": "0.1.0",
+  "engines": {
+    "node": "6.2.0"},
+
   "private": true,
   "dependencies": {
+    "express": "4.13.4",
     "chance": "^1.0.13",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -12,11 +16,13 @@
     "redux-saga": "^0.16.0",
     "ws": "^4.0.0"
   },
+
   "scripts": {
     "start": "react-scripts start",
+    "dev" : "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "homepage" : "https://chat.derekwebdev.com/"
+    "eject": "react-scripts eject"
+    
   }
 }
